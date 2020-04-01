@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Shabnam";
+  src: url(../fonts/Shabnam.woff) format("woff"),
+    url(../fonts/Shabnam.ttf) format("ttf"),
+    url(../fonts/Shabnam.eot) format("eot");
+  font-weight: normal;
+}
+
 /* latyout */
 * {
   margin: 0;
@@ -26,4 +34,34 @@ body {
   width: 55%;
   height: 100%;
   background: linear-gradient(45deg, #28bbee, #9bf0dd);
+}
+
+/* form-side - login word*/
+.form-side {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-side .top-form {
+  height: 31%;
+  display: flex;
+}
+
+.form-side .top-form .login-word {
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+.form-side .top-form .login-word span {
+  color: #0192ed;
+  font-family: Shabnam;
+  font-weight: bold;
+  font-size: larger;
+}
+
+/* form-side - login form*/
+.form-side .form {
+  background-color: cadetblue;
+  height: 69%;
 }
