@@ -41,6 +41,8 @@ body {
 .container-fluid .radar-side {
   width: 55%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(45deg, #28bbee, #9bf0dd);
 }
 
@@ -276,50 +278,49 @@ body {
   position: relative;
 }
 .radar-side .circle-radar .logo {
-    z-index: 3;
+  z-index: 3;
 }
 .radar-side .circle-radar .circle {
-    position: absolute;
-    border-radius: 50%;
+  position: absolute;
+  border-radius: 50%;
 }
-.radar-side .circle-radar .circle1{
-    animation: circleRadar 4s linear 1s infinite normal forwards;
+.radar-side .circle-radar .circle1 {
+  animation: circleRadar 4s linear 1s infinite normal forwards;
 }
-.radar-side .circle-radar .circle2{
-    animation: circleRadar 4s linear 1.4s infinite normal forwards;
+.radar-side .circle-radar .circle2 {
+  animation: circleRadar 4s linear 1.4s infinite normal forwards;
 }
-.radar-side .circle-radar .circle3{
-    animation: circleRadar 4s linear 1.8s infinite normal forwards;
+.radar-side .circle-radar .circle3 {
+  animation: circleRadar 4s linear 1.8s infinite normal forwards;
 }
-.radar-side .circle-radar .circle4{
-    animation: circleRadar 4s linear 2.2s infinite normal forwards;
+.radar-side .circle-radar .circle4 {
+  animation: circleRadar 4s linear 2.2s infinite normal forwards;
 }
-.radar-side .circle-radar .circle5{
-    animation: circleRadar 4s linear 2.6s infinite normal forwards;
+.radar-side .circle-radar .circle5 {
+  animation: circleRadar 4s linear 2.6s infinite normal forwards;
 }
-.radar-side .circle-radar .circle6{
-    animation: circleRadar 4s linear 3s infinite normal forwards;
+.radar-side .circle-radar .circle6 {
+  animation: circleRadar 4s linear 3s infinite normal forwards;
 }
 
 @keyframes circleRadar {
-    0% {
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    75%{
-        border: 550px solid rgba(255, 255, 255, 0);
-    }
-    100% {
-        border: 550px solid rgba(255, 255, 255, 0);
-    }
+  0% {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    border: 550px solid rgba(255, 255, 255, 0);
+  }
+  100% {
+    border: 550px solid rgba(255, 255, 255, 0);
+  }
 }
 
 .radar-side .radar-angle {
-  min-height: 25%;
-  max-height: 90%;
+  height: 90%;
   opacity: 0.3;
   position: absolute;
-  left: 27.5%;
-  bottom: 53%;
+  left: 50%;
+  bottom: 50%;
   display: inline-block;
   transform-origin: left bottom;
   animation: radarAngle 10s linear 0s infinite normal;
@@ -340,4 +341,37 @@ body {
   bottom: 7px;
   font-size: 18px;
   letter-spacing: 1px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 950px) {
+  .form-side .form .form-top-text p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    overflow: scroll;
+  }
+  .container-fluid {
+    flex-direction: column;
+    height: auto;
+  }
+  .container-fluid .form-side {
+    width: 100%;
+    height: 80vh;
+  }
+  .container-fluid .radar-side {
+    width: 100%;
+    height: 65vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .form-side .form .form-top-text p {
+    font-size: 8px;
+  }
 }
