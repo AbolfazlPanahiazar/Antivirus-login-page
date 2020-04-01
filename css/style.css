@@ -100,17 +100,15 @@ body {
 
 .form-side .form form .username,
 .password {
-  background-color: white;
   border-bottom: 2px solid #bebebe;
   padding-bottom: 5px;
-  box-sizing: border-box;
   display: flex;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .form-side .form form i {
   color: #bebebe;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .form-side .form form input {
@@ -123,7 +121,7 @@ body {
   font-family: Shabnam;
   font-size: small;
   color: #bebebe;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 /* hover and focus stuff */
@@ -168,6 +166,49 @@ body {
 }
 .form-side .form form .password:focus-within > i {
   color: #0093ed;
+}
+
+.form-side .form form .validate {
+    display: flex;
+}
+
+.form-side .form form .safe-code {
+  border-bottom: 2px solid #bebebe;
+  width: 63%;
+  padding-bottom: 5px;
+  display: flex;
+  transition: all 0.5s;
+}
+.form-side .form form .safe-code:hover {
+    border-bottom: 2px solid #0093ed;
+  }
+  .form-side .form form .safe-code:hover i {
+    color: #0093ed;
+  }
+  .form-side .form form .safe-code:hover input::placeholder {
+    color: #0093ed;
+  }
+  .form-side .form form .safe-code input:focus {
+    outline: none;
+  }
+  .form-side .form form .safe-code input:focus::placeholder {
+    color: #0093ed;
+  }
+  .form-side .form form .safe-code:focus-within {
+    border-bottom: 2px solid #0093ed;
+  }
+  .form-side .form form .safe-code:focus-within > i {
+    color: #0093ed;
+  }
+.form-side .form form .safe-code::placeholder {
+  font-family: Shabnam;
+  font-size: small;
+  color: #bebebe;
+  transition: all 0.5s;
+}
+
+.form-side .form form .validate img {
+    width: 37%;
 }
 
 .form-side .form form .remember-section {
