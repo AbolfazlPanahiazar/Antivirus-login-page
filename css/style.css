@@ -6,6 +6,12 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "Comfortaa";
+  src: url(../fonts/Comfortaa-Regular.ttf) format("ttf");
+  font-weight: normal;
+}
+
 /* latyout */
 * {
   margin: 0;
@@ -15,6 +21,7 @@
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .container-fluid {
@@ -28,6 +35,7 @@ body {
 .container-fluid .form-side {
   width: 45%;
   height: 100%;
+  z-index: 1;
 }
 
 .container-fluid .radar-side {
@@ -235,11 +243,56 @@ body {
   transition: all 0.4s;
 }
 .form-side .form form label:hover {
-    color: #0093ed;
+  color: #0093ed;
 }
 .form-side .form form label:hover > i {
-    color: #0093ed;
+  color: #0093ed;
 }
 .form-side .form form label i {
   transition: all 0.4s;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* radar-side */
+.radar-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.radar-side .logo {
+  z-index: 2;
+}
+
+.radar-side .radar-angle {
+  min-height: 25%;
+  max-height: 90%;
+  opacity: 0.3;
+  position: absolute;
+  left: 27.5%;
+  bottom: 53%;
+  display: inline-block;
+  transform-origin: left bottom;
+  animation: radarAngle 10s linear 0s infinite normal;
+}
+@keyframes radarAngle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-side span {
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  position: absolute;
+  bottom: 7px;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
