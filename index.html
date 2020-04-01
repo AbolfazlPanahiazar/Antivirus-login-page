@@ -41,12 +41,20 @@
             <p>جهت ورود به برنامه نام کاربری و رمز عبور خود را وارد نمایید</p>
           </div>
           <form action="">
-            <input type="text" placeholder="پست الکترونیک" />
-            <input type="password" placeholder="رمز عبور" />
+            <div class="username">
+              <input type="text" placeholder="پست الکترونیک" />
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="password">
+              <input type="password" placeholder="رمز عبور" />
+              <i class="fas fa-lock"></i>
+            </div>
             <div class="validate"></div>
             <button type="submit">ورود</button>
-            <label for="remember">مرا به خاطر بسپار</label>
-            <input type="checkbox" id="remember" />
+            <div class="remember-section">
+              <input type="checkbox" id="remember" />
+              <label for="remember">مرا به خاطر بسپار</label>
+            </div>
           </form>
         </div>
       </div>
