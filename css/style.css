@@ -264,8 +264,53 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
-.radar-side .logo {
+.radar-side .circle-radar {
   z-index: 2;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 1px;
+  height: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.radar-side .circle-radar .logo {
+    z-index: 3;
+}
+.radar-side .circle-radar .circle {
+    position: absolute;
+    border-radius: 50%;
+}
+.radar-side .circle-radar .circle1{
+    animation: circleRadar 4s linear 1s infinite normal forwards;
+}
+.radar-side .circle-radar .circle2{
+    animation: circleRadar 4s linear 1.4s infinite normal forwards;
+}
+.radar-side .circle-radar .circle3{
+    animation: circleRadar 4s linear 1.8s infinite normal forwards;
+}
+.radar-side .circle-radar .circle4{
+    animation: circleRadar 4s linear 2.2s infinite normal forwards;
+}
+.radar-side .circle-radar .circle5{
+    animation: circleRadar 4s linear 2.6s infinite normal forwards;
+}
+.radar-side .circle-radar .circle6{
+    animation: circleRadar 4s linear 3s infinite normal forwards;
+}
+
+@keyframes circleRadar {
+    0% {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    75%{
+        border: 550px solid rgba(255, 255, 255, 0);
+    }
+    100% {
+        border: 550px solid rgba(255, 255, 255, 0);
+    }
 }
 
 .radar-side .radar-angle {
