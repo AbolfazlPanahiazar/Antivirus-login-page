@@ -1,1 +1,29 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+/* latyout */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-fluid {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  display: flex;
+  justify-content: start;
+}
+
+.container-fluid .form-side {
+  width: 45%;
+  height: 100%;
+}
+
+.container-fluid .radar-side {
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(45deg, #28bbee, #9bf0dd);
+}
